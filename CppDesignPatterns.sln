@@ -5,6 +5,11 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppDesignPatterns", "CppDesignPatterns.vcxproj", "{E729773B-E3D3-4C4D-BA73-1153F07F941A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9A8C5C1D-974D-46FF-B509-87D4AC83C01C}"
+	ProjectSection(SolutionItems) = preProject
+		output.txt = output.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

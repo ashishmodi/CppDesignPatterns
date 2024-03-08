@@ -1,0 +1,8 @@
+Drawing a Circle.
+Drawing a Square.
+Baking New York-style cheese pizza.
+Baking New York-style pepperoni pizza.
+Baking Mexican-style cheese pizza.
+Baking Mexican-style pepperoni pizza.
+
+C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 11260) exited with code 0.

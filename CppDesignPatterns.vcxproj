@@ -131,6 +131,7 @@
     <ClCompile Include="DesignPatternTester.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractFactory.h" />
     <ClInclude Include="DesignPatternTester.h" />
     <ClInclude Include="Factory.h" />
   </ItemGroup>

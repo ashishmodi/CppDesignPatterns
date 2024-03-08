@@ -10,27 +10,23 @@ public:
 };
 
 class Circle : public Shape {	// Concrete Product class
-public:
-	void draw() override { cout << "Drawing a Circle." << endl; }
+	public: void draw() override { cout << "Drawing a Circle." << endl; }
 };
 
 class Square : public Shape {	// Concrete Product class
-public:
-	void draw() override { cout << "Drawing a Square." << endl; }
+	public: void draw() override { cout << "Drawing a Square." << endl; }
 };
 
 class ShapeFactory {			// Abstract creator class
-public:
+public: 
 	virtual Shape* createShape() = 0;
 	virtual ~ShapeFactory() {}
 };
 
 class CircleFactory : public ShapeFactory {		// Concrete creator class
-public:
-	Shape* createShape() override { return new Circle(); }
+	public: Shape* createShape() override { return new Circle(); }
 };
 
 class SquareFactory : public ShapeFactory {		// Concrete creator class
-public:
-	Shape* createShape() override { return new Square(); }
+	public: Shape* createShape() override { return new Square(); }
 };

@@ -1,6 +1,7 @@
 #include "DesignPatternTester.h"
 #include "Factory.h"
 #include "AbstractFactory.h"
+#include "Builder.h"
 
 void DesignPatternTester::testFactory() {
 	ShapeFactory* circleFactory = new CircleFactory();
@@ -32,4 +33,17 @@ void DesignPatternTester::testAbstractFactory() {
 
 	delete nyFactory;			delete nyChessePizza;			delete nyPepperoniPizza;
 	delete mexicanFactory;		delete mexicanChessePizza;		delete mexicanPepperoniPizza;
+}
+
+void DesignPatternTester::testBuilder() {
+	DesktopComputerBuilder desktopBuilder;
+	ComputerAssembler assembler;
+	Computer desktop = assembler.assembleComputer(desktopBuilder);
+	cout << "Desktop computer configuration:" << endl;
+	desktop.display();
+
+	LaptopComputerBuilder laptopBuilder;
+	Computer laptop = assembler.assembleComputer(laptopBuilder);
+	cout << "Laptop computer configuration:" << endl;
+	laptop.display();
 }

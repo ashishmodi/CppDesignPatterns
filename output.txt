@@ -4,5 +4,9 @@ Baking New York-style cheese pizza.
 Baking New York-style pepperoni pizza.
 Baking Mexican-style cheese pizza.
 Baking Mexican-style pepperoni pizza.
+Desktop computer configuration:
+CPU: Intel i7, Memory = 16 GB, Storage = 512 GB SSD
+Laptop computer configuration:
+CPU: Intel i7, Memory = 16 GB, Storage = 1 TB SSD
 
 C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 11260) exited with code 0.

@@ -4,6 +4,7 @@
 #include "Builder.h"
 
 void DesignPatternTester::testFactory() {
+	cout << "*** Factory pattern ***" << endl;
 	ShapeFactory* circleFactory = new CircleFactory();
 	ShapeFactory* squareFactory = new SquareFactory();
 
@@ -17,9 +18,11 @@ void DesignPatternTester::testFactory() {
 	delete squareFactory;
 	delete circle;
 	delete square;
+	cout << endl;
 }
 
 void DesignPatternTester::testAbstractFactory() {
+	cout << "*** Abstract factory pattern ***" << endl;
 	PizzaFactory* nyFactory = new NewYorkPizzaFactory();
 	Pizza* nyChessePizza = nyFactory->createCheesePizza();
 	Pizza* nyPepperoniPizza = nyFactory->createPepperoniPizza();
@@ -33,17 +36,21 @@ void DesignPatternTester::testAbstractFactory() {
 
 	delete nyFactory;			delete nyChessePizza;			delete nyPepperoniPizza;
 	delete mexicanFactory;		delete mexicanChessePizza;		delete mexicanPepperoniPizza;
+	cout << endl;
 }
 
 void DesignPatternTester::testBuilder() {
-	DesktopComputerBuilder desktopBuilder;
+	cout << "*** Builder pattern ***" << endl;
 	ComputerAssembler assembler;
-	Computer desktop = assembler.assembleComputer(desktopBuilder);
-	cout << "Desktop computer configuration:" << endl;
-	desktop.display();
+	Computer computer;
 
-	LaptopComputerBuilder laptopBuilder;
-	Computer laptop = assembler.assembleComputer(laptopBuilder);
-	cout << "Laptop computer configuration:" << endl;
-	laptop.display();
+	assembler.setBuilderType(new DesktopComputerBuilder());
+	computer = assembler.assembleComputer();
+	cout << "Desktop Computer specification:" << endl;
+	computer.display();
+
+	assembler.setBuilderType(new LaptopComputerBuilder());
+	computer = assembler.assembleLaptop();
+	cout << "Laptop Computer specification:" << endl;
+	computer.display();
 }

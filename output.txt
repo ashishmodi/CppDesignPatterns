@@ -1,12 +1,24 @@
+$-$-$-$-$-$-$-$ Creational Design patterns $-$-$-$-$-$-$-$
+*** Factory pattern ***
 Drawing a Circle.
 Drawing a Square.
+
+*** Abstract factory pattern ***
 Baking New York-style cheese pizza.
 Baking New York-style pepperoni pizza.
 Baking Mexican-style cheese pizza.
 Baking Mexican-style pepperoni pizza.
-Desktop computer configuration:
-CPU: Intel i7, Memory = 16 GB, Storage = 512 GB SSD
-Laptop computer configuration:
-CPU: Intel i7, Memory = 16 GB, Storage = 1 TB SSD
 
-C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 11260) exited with code 0.
+*** Builder pattern ***
+Desktop Computer specification:
+CPU: Intel i5, Memory = 16 GB, Storage = 512 GB SSD
+Screen types supported are:
+Normal
+Laptop Computer specification:
+CPU: Intel i7, Memory = 16 GB, Storage = 1TB SSD
+Screen types supported are:
+Normal
+TouchScreen
+
+C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 40588) exited with code 0.
+Press any key to close this window . . .

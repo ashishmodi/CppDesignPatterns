@@ -8,6 +8,8 @@ int main() {
     tester.testFactory();
     tester.testAbstractFactory();
     tester.testBuilder();
+    tester.testPrototype();
+    tester.testSingleton();
 
     return 0;
 }

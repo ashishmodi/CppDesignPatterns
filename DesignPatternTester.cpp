@@ -2,14 +2,16 @@
 #include "Factory.h"
 #include "AbstractFactory.h"
 #include "Builder.h"
+#include "Prototype.h"
+#include "Singleton.h"
 
 void DesignPatternTester::testFactory() {
 	cout << "*** Factory pattern ***" << endl;
-	ShapeFactory* circleFactory = new CircleFactory();
-	ShapeFactory* squareFactory = new SquareFactory();
+	Factory::ShapeFactory* circleFactory = new Factory::CircleFactory();
+	Factory::ShapeFactory* squareFactory = new Factory::SquareFactory();
 
-	Shape* circle = circleFactory->createShape();
-	Shape* square = squareFactory->createShape();
+	Factory::Shape* circle = circleFactory->createShape();
+	Factory::Shape* square = squareFactory->createShape();
 
 	circle->draw();
 	square->draw();
@@ -53,4 +55,26 @@ void DesignPatternTester::testBuilder() {
 	computer = assembler.assembleLaptop();
 	cout << "Laptop Computer specification:" << endl;
 	computer.display();
+}
+
+// using namespace Prototype;
+void DesignPatternTester::testPrototype() {
+	cout << "*** Prototype pattern ***" << endl;
+	Prototype::Circle circleProto(5.0);
+	Prototype::Rectangle rectangleProto(4.0, 6.0);
+
+	Prototype::Shape* circle = circleProto.clone();
+	Prototype::Shape* rectangle = rectangleProto.clone();
+
+	circle->draw();
+	rectangle->draw();
+
+	delete circle;
+	delete rectangle;
+}
+
+void DesignPatternTester::testSingleton() {
+	cout << "*** Prototype pattern ***" << endl;
+	Configuration& config = Configuration::getInstance();
+	config.initConfigs();
 }

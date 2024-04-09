@@ -74,7 +74,8 @@ void DesignPatternTester::testPrototype() {
 }
 
 void DesignPatternTester::testSingleton() {
-	cout << "*** Prototype pattern ***" << endl;
-	Configuration& config = Configuration::getInstance();
-	config.initConfigs();
+	cout << "*** Singleton pattern ***" << endl;
+	Configuration& config = Configuration::getInstance();	// new instance created
+	Configuration& config2 = Configuration::getInstance();	// no new instance here
+	cout << "Day is: " << config.getValue("Day") << endl;
 }

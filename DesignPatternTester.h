@@ -6,5 +6,7 @@ public:
 	void testBuilder();
 	void testPrototype();
 	void testSingleton();
+	void testAdapter();
+	void testBridge();
 };
 

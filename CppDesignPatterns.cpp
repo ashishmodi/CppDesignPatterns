@@ -10,6 +10,9 @@ int main() {
     tester.testBuilder();
     tester.testPrototype();
     tester.testSingleton();
+    cout << "$-$-$-$-$-$-$-$-$-$ Structural Design patterns $-$-$-$-$-$-$-$-$-$" << endl;
+    tester.testAdapter();
+    tester.testBridge();
 
     return 0;
 }

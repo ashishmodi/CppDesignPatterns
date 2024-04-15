@@ -4,6 +4,8 @@
 #include "Builder.h"
 #include "Prototype.h"
 #include "Singleton.h"
+#include "Adapter.h"
+#include "Bridge.h"
 
 void DesignPatternTester::testFactory() {
 	cout << "*** Factory pattern ***" << endl;
@@ -55,6 +57,7 @@ void DesignPatternTester::testBuilder() {
 	computer = assembler.assembleLaptop();
 	cout << "Laptop Computer specification:" << endl;
 	computer.display();
+	cout << endl;
 }
 
 // using namespace Prototype;
@@ -71,6 +74,7 @@ void DesignPatternTester::testPrototype() {
 
 	delete circle;
 	delete rectangle;
+	cout << endl;
 }
 
 void DesignPatternTester::testSingleton() {
@@ -78,4 +82,25 @@ void DesignPatternTester::testSingleton() {
 	Configuration& config = Configuration::getInstance();	// new instance created
 	Configuration& config2 = Configuration::getInstance();	// no new instance here
 	cout << "Day is: " << config.getValue("Day") << endl;
+	cout << endl;
+}
+
+void DesignPatternTester::testAdapter() {
+	cout << "*** Adapter pattern ***" << endl;
+	DataReader dataReader;
+	SDCard* sdCard = new SDCard(10);
+	USB* usbAdapter = new SDCard_USB_Adapter(sdCard);
+	dataReader.readDataFromStorage(usbAdapter);
+	cout << endl;
+}
+
+void DesignPatternTester::testBridge() {
+	cout << "*** Bridge pattern ***" << endl;
+	Bridge::Red colorRed;
+	Bridge::Blue colorBlue;
+	Bridge::Circle circle(colorRed);
+	Bridge::Square square(colorBlue);
+	circle.draw();
+	square.draw();
+	cout << endl;
 }

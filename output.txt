@@ -19,9 +19,11 @@ CPU: Intel i7, Memory = 16 GB, Storage = 1TB SSD
 Screen types supported are:
 Normal
 TouchScreen
+
 *** Prototype pattern ***
 Circle radius: 5
 Rectangle width: 4, height: 6
+
 *** Singleton pattern ***
 * Printing configs *
 Day :: Monday
@@ -30,6 +32,15 @@ Year :: 2024
 Config instance created.
 Day is: Monday
 
-C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 15348) exited with code 0.
-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+$-$-$-$-$-$-$-$-$-$ Structural Design patterns $-$-$-$-$-$-$-$-$-$
+*** Adapter pattern ***
+Transmitting 10 bytes of data from SDCard device
+Received data: 10 bytes.
+
+*** Bridge pattern ***
+Drawing a circle with color Red...
+Drawing a square with color Blue...
+
+
+C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 10228) exited with code 0.
 Press any key to close this window . . .

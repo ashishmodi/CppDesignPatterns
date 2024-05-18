@@ -13,6 +13,8 @@ int main() {
     cout << "$-$-$-$-$-$-$-$-$-$ Structural Design patterns $-$-$-$-$-$-$-$-$-$" << endl;
     tester.testAdapter();
     tester.testBridge();
+    tester.testComposite();
+    tester.testDecorator();
 
     return 0;
 }

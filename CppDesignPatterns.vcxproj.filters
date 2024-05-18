@@ -47,6 +47,12 @@
     <ClInclude Include="Bridge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Composite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Decorator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="File1.txt">

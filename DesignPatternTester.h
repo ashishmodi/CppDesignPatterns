@@ -8,5 +8,7 @@ public:
 	void testSingleton();
 	void testAdapter();
 	void testBridge();
+	void testComposite();
+	void testDecorator();
 };
 

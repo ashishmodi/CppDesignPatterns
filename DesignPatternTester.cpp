@@ -6,6 +6,8 @@
 #include "Singleton.h"
 #include "Adapter.h"
 #include "Bridge.h"
+#include "Composite.h"
+#include "Decorator.h"
 
 void DesignPatternTester::testFactory() {
 	cout << "*** Factory pattern ***" << endl;
@@ -103,4 +105,35 @@ void DesignPatternTester::testBridge() {
 	circle.draw();
 	square.draw();
 	cout << endl;
+}
+
+void DesignPatternTester::testComposite() {
+	cout << "*** Composite pattern ***" << endl;
+	SimpleNode* sNodeA = SimpleNode::createNode("simpleA", "sA");
+	SimpleNode* sNodeB = SimpleNode::createNode("simpleB", "sB");
+	ComplexNode* cNodeA = ComplexNode::createNode("cmplxA");
+	ComplexNode* cNodeB = ComplexNode::createNode("cmplxB");
+	ComplexNode* cNodeC = ComplexNode::createNode("cmplxC");
+	cNodeA->appendNode(cNodeB);
+	cNodeA->appendNode(cNodeC);
+	cNodeB->appendNode(sNodeA);
+	cNodeB->appendNode(sNodeB);
+
+	list<Node*> nodes;
+	nodes.push_back(ComplexNode::createNode("cmplx1"));
+	nodes.push_back(ComplexNode::createNode("cmplx2"));
+	list<Node*>::const_iterator begin = nodes.begin(), end = nodes.end();
+}
+
+void DesignPatternTester::testDecorator() {
+	cout << "*** Decorator pattern ***" << endl;
+	Cake* plainCake = new PlainCake();
+	cout << plainCake->getDesc() << " .. costs Rs." << plainCake->cost() << endl;
+	Cake* iceCreamCake = new IceCreamCakeDecorator(plainCake);
+	cout << iceCreamCake->getDesc() << " .. costs Rs." << iceCreamCake->cost() << endl;
+	Cake* fruitIceCreamCake = new FruitsCakeDecorator(iceCreamCake);
+	cout << fruitIceCreamCake->getDesc() << " .. costs Rs." << fruitIceCreamCake->cost() << endl;
+	delete plainCake;
+	delete iceCreamCake;
+	delete fruitIceCreamCake;
 }

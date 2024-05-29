@@ -8,6 +8,8 @@
 #include "Bridge.h"
 #include "Composite.h"
 #include "Decorator.h"
+#include "Facade.h"
+#include "Flyweight.h"
 
 void DesignPatternTester::testFactory() {
 	cout << "*** Factory pattern ***" << endl;
@@ -123,6 +125,7 @@ void DesignPatternTester::testComposite() {
 	nodes.push_back(ComplexNode::createNode("cmplx1"));
 	nodes.push_back(ComplexNode::createNode("cmplx2"));
 	list<Node*>::const_iterator begin = nodes.begin(), end = nodes.end();
+	cout << endl;
 }
 
 void DesignPatternTester::testDecorator() {
@@ -136,4 +139,20 @@ void DesignPatternTester::testDecorator() {
 	delete plainCake;
 	delete iceCreamCake;
 	delete fruitIceCreamCake;
+	cout << endl;
+}
+
+void DesignPatternTester::testFacade() {
+	cout << "*** Facade pattern ***" << endl;
+	Order_Facade orderFacade;
+	orderFacade.orderFood();
+	cout << endl;
+}
+
+void DesignPatternTester::testFlyweight() {
+	cout << "*** Flyweight pattern ***" << endl;
+	Game* game = new Game();
+	// unique_ptr<Game> game = make_unique<Game>();
+	game->addTree(1, 3, "green");
+	game->addTree(2, 5, "brown");
 }

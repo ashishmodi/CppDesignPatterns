@@ -15,6 +15,8 @@ int main() {
     tester.testBridge();
     tester.testComposite();
     tester.testDecorator();
+    tester.testFacade();
+    tester.testFlyweight();
 
     return 0;
 }

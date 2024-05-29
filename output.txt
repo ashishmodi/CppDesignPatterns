@@ -41,6 +41,29 @@ Received data: 10 bytes.
 Drawing a circle with color Red...
 Drawing a square with color Blue...
 
+*** Composite pattern ***
+SimpleNode created with name: simpleA
+SimpleNode created with name: simpleB
+ComplexNode created with name: cmplxA
+ComplexNode created with name: cmplxB
+ComplexNode created with name: cmplxC
+ComplexNode created with name: cmplx1
+ComplexNode created with name: cmplx2
 
-C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 10228) exited with code 0.
+*** Decorator pattern ***
+Plain cake! .. costs Rs.300
+Plain cake! .. with Ice cream .. costs Rs.500
+Plain cake! .. with Ice cream .. with Fruits .. costs Rs.600
+
+*** Facade pattern ***
+Writing client's order...
+Preparing food...
+Serving client...
+Washing dishes...
+
+*** Flyweight pattern ***
+Tree 0 with color green rendered at 1, 3
+Tree 1 with color brown rendered at 2, 5
+
+C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 66744) exited with code 0.
 Press any key to close this window . . .

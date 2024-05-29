@@ -10,5 +10,7 @@ public:
 	void testBridge();
 	void testComposite();
 	void testDecorator();
+	void testFacade();
+	void testFlyweight();
 };
 

@@ -17,6 +17,9 @@ int main() {
     tester.testDecorator();
     tester.testFacade();
     tester.testFlyweight();
-
+    tester.testPrototype();
+    tester.testProxy();
+    cout << "$-$-$-$-$-$-$-$-$-$ Behavioral Design patterns $-$-$-$-$-$-$-$-$-$" << endl;
+    tester.testChainOfResponsibility();
     return 0;
 }

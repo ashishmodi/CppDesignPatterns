@@ -10,6 +10,8 @@
 #include "Decorator.h"
 #include "Facade.h"
 #include "Flyweight.h"
+#include "Proxy.h"
+#include "ChainOfResp.h"
 
 void DesignPatternTester::testFactory() {
 	cout << "*** Factory pattern ***" << endl;
@@ -155,4 +157,24 @@ void DesignPatternTester::testFlyweight() {
 	// unique_ptr<Game> game = make_unique<Game>();
 	game->addTree(1, 3, "green");
 	game->addTree(2, 5, "brown");
+	cout << endl;
+}
+
+void DesignPatternTester::testProxy() {
+	cout << "*** Proxy pattern ***" << endl;
+	// Image* image = new ImageProxy("example.png");
+	unique_ptr<Image> image = make_unique<ImageProxy>("example.png");
+	image->display();		// load and display
+	image->display();		// only display
+	cout << endl;
+}
+
+void DesignPatternTester::testChainOfResponsibility() {
+	cout << "*** Chain of responsibility pattern ***" << endl;
+	Handler* junior = new Junior();
+	ApprovalHelper helper;
+	helper.approvalWorkflow(junior);
+	Handler* senior = new Senior();
+	helper.approvalWorkflow(senior);
+	cout << endl;
 }

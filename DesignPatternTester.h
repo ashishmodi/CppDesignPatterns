@@ -12,5 +12,7 @@ public:
 	void testDecorator();
 	void testFacade();
 	void testFlyweight();
+	void testProxy();
+	void testChainOfResponsibility();
 };
 

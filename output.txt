@@ -65,5 +65,34 @@ Washing dishes...
 Tree 0 with color green rendered at 1, 3
 Tree 1 with color brown rendered at 2, 5
 
-C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 66744) exited with code 0.
+*** Prototype pattern ***
+Circle radius: 5
+Rectangle width: 4, height: 6
+
+*** Proxy pattern ***
+Loading image: example.png
+Displaying image: example.png
+Displaying image: example.png
+
+$-$-$-$-$-$-$-$-$-$ Behavioral Design patterns $-$-$-$-$-$-$-$-$-$
+*** Chain of responsibility pattern ***
+Junior[ Y ]
+Purchase Summary => Amount: 200, Approver: Junior, Status: 1
+Junior[ N ] Senior[ Y ]
+Purchase Summary => Amount: 600, Approver: Senior, Status: 1
+Junior[ N ] Senior[ N ] Manager[ Y ]
+Purchase Summary => Amount: 1600, Approver: Manager, Status: 1
+Junior[ N ] Senior[ N ] Manager[ N ]
+Purchase Summary => Amount: 5000, Approver: , Status: 0
+Senior[ Y ]
+Purchase Summary => Amount: 200, Approver: Senior, Status: 1
+Senior[ Y ]
+Purchase Summary => Amount: 600, Approver: Senior, Status: 1
+Senior[ N ] Senior[ N ] Manager[ Y ]
+Purchase Summary => Amount: 1600, Approver: Manager, Status: 1
+Senior[ N ] Senior[ N ] Manager[ N ]
+Purchase Summary => Amount: 5000, Approver: , Status: 0
+
+
+C:\Ashish\Learning\CppDesignPatterns\x64\Debug\CppDesignPatterns.exe (process 67856) exited with code 0.
 Press any key to close this window . . .
